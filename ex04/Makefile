@@ -14,10 +14,10 @@ NAME 					= replace
 
 # class
 CLASS_DIR				= .
-CLASS_NAME				= Replace
+CLASS_NAME				= 
 
 # other src
-OTHER_SRC				= 
+OTHER_SRC				= filer
 
 # main
 SRC_MAIN				= main
@@ -29,7 +29,7 @@ SRC_NAME				= $(addsuffix $(SRC_SUFFIX), $(CLASS_NAME) $(SRC_MAIN) $(OTHER_SRC))
 SRC						= $(addprefix $(SRC_DIR)/, $(SRC_NAME))
 
 # other header
-OTHER_HEAD				= 
+OTHER_HEAD				= filer
 
 # head
 HEAD_SUFFIX				= .hpp
