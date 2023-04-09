@@ -47,12 +47,12 @@ void	Harl::debug(void) const
 
 void	Harl::info(void) const
 {
-	std::cout << _INFO << ": " << "I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
+	std::cout << _INFO << ": " << "I cannot believe adding extra bacon costs more money. You didn't put enough bacon in my burger! If you did, I wouldn't be asking for more!" << std::endl;
 }
 
 void	Harl::warning(void) const
 {
-	std::cout << _WARNING << ": " << "I think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month." << std::endl;
+	std::cout << _WARNING << ": " << "I think I deserve to have some extra bacon for free. I've been coming for years whereas you started working here since last month." << std::endl;
 }
 
 void	Harl::error(void) const
