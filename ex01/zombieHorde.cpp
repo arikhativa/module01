@@ -1,6 +1,12 @@
 
-#include "toString.hpp"
 #include "Zombie.hpp"
+
+static std::string	toString(int num)
+{
+	std::ostringstream ss;
+	ss << num;
+	return ss.str();
+}
 
 Zombie* zombieHorde( int N, std::string name )
 {
@@ -11,7 +17,7 @@ Zombie* zombieHorde( int N, std::string name )
     Zombie *Horde = new Zombie[N];
 	while (i < N)
 	{
-		std::string tmpName = name + "-" + toString<int>(i);
+		std::string tmpName = name + "-" + toString(i);
 		Horde[i].init(tmpName);
 		++i;
 	}
