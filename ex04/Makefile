@@ -6,18 +6,11 @@
 #    By: yrabby <yrabby@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 13:56:52 by yrabby            #+#    #+#              #
-#    Updated: 2023/03/22 12:16:58 by yrabby           ###   ########.fr        #
+#    Updated: 2023/04/22 11:41:34 by yrabby           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 					= replace
-
-# class
-CLASS_DIR				= .
-CLASS_NAME				= 
-
-# other src
-OTHER_SRC				= filer
 
 # main
 SRC_MAIN				= main
@@ -28,25 +21,16 @@ SRC_DIR					= .
 SRC_NAME				= $(addsuffix $(SRC_SUFFIX), $(CLASS_NAME) $(SRC_MAIN) $(OTHER_SRC))
 SRC						= $(addprefix $(SRC_DIR)/, $(SRC_NAME))
 
-# other header
-OTHER_HEAD				= filer
-
-# head
-HEAD_SUFFIX				= .hpp
-HEAD_DIR				= .
-HEAD_NAME				= $(addsuffix $(HEAD_SUFFIX), $(CLASS_NAME))
-HEAD					= $(addprefix $(HEAD_DIR)/, $(HEAD_NAME))
-
 # obj
 OBJ_DIR					= .
 OBJ						= $(SRC:.cpp=.o)
 
 # flags
 CC 						= c++
-CFLAGS 					= -c -Wall -Wextra -Werror -std=c++98 -pedantic -I $(HEAD_DIR)
+CFLAGS 					= -c  -std=c++98 -pedantic 
 
 # implicit rules
-$(addprefix $(OBJ_DIR)/, %.o): $(addprefix $(SRC_DIR)/, %.cpp) $(HEAD)
+$(addprefix $(OBJ_DIR)/, %.o): $(addprefix $(SRC_DIR)/, %.cpp) 
 	$(CC) $(CFLAGS) $< -o $(@)
 
 # rules
