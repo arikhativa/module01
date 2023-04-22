@@ -9,7 +9,9 @@ int	main(int ac, char **av)
 		h.complain(av[1]);
 	}
 	else
-		std::cout << "usage: ./harlFilter [DEBUG|INFO|WARNING|ERROR]" << std::endl;
-	Harl h;
+	{
+		std::cerr << "usage: ./harlFilter [DEBUG|INFO|WARNING|ERROR]" << std::endl;
+		return -1;
+	}
 	return 0;
 }

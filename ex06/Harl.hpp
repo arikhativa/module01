@@ -5,7 +5,6 @@
 # include <iostream>
 # include <string>
 
-
 class Harl
 {
 	public:
@@ -13,10 +12,10 @@ class Harl
 		~Harl();
 		void	complain( std::string level ) const;
 
-		static const	std::string	_DEBUG;
-		static const	std::string	_INFO;
-		static const	std::string	_WARNING;
-		static const	std::string	_ERROR;
+		static const	std::string	DEBUG;
+		static const	std::string	INFO;
+		static const	std::string	WARNING;
+		static const	std::string	ERROR;
 	private:
 		
 		void	debug(void) const;
@@ -24,7 +23,5 @@ class Harl
 		void	warning(void) const;
 		void	error(void) const;
 };
-
-typedef void (Harl::*t_harl_methods )(void) const;
 
 #endif /* ************************************************************ HARL_H */
